@@ -19,12 +19,10 @@ namespace AnalysisViewerSimple
 
         private void CreateForm()
         {
-            // Настройка формы
             this.Text = "Статистика анализов";
             this.Size = new Size(850, 500);
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            // Кнопка загрузки
             loadButton = new Button();
             loadButton.Text = "Загрузить данные";
             loadButton.Location = new Point(20, 20);
@@ -32,7 +30,6 @@ namespace AnalysisViewerSimple
             loadButton.Click += LoadButton_Click;
             this.Controls.Add(loadButton);
 
-            // Таблица данных
             dataGrid = new DataGridView();
             dataGrid.Location = new Point(20, 60);
             dataGrid.Size = new Size(790, 390);
@@ -51,7 +48,6 @@ namespace AnalysisViewerSimple
         {
             try
             {
-                // ЗАМЕНИТЕ НА ВАШУ БАЗУ ДАННЫХ!
                 string connectionString = @"database=localhost:C:\Users\big_rubba27\Documents\New Folder\ZACHET;
                                           user=SYSDBA;password=masterkey;";
 
@@ -78,4 +74,5 @@ namespace AnalysisViewerSimple
             }
         }
     }
+
 }
